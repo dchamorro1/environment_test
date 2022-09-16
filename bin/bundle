@@ -79,6 +79,7 @@ m = Module.new do
 
     requirement
   end
+  
 
   def load_bundler!
     ENV["BUNDLE_GEMFILE"] ||= gemfile
