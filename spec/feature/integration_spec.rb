@@ -32,9 +32,11 @@ RSpec.describe 'Creating a book', type: :feature do
   scenario 'valid published date' do
     visit new_book_path
     fill_in 'Title', with: 'harry potter'
-    fill_in 'Published date', with: DateTime.new(2001, 5, 3.5)
+    # defaults to today's date
     click_on 'Create Book'
     visit books_path
-    expect(page).to have_content(DateTime.new(2001, 5, 3.5))
+    expect(page).to have_content("2022")
   end
 end
+
+
