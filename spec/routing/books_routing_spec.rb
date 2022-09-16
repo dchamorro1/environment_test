@@ -13,6 +13,7 @@ RSpec.describe BooksController, type: :routing do
     it "routes to #show" do
       expect(get: "/books/1").to route_to("books#show", id: "1")
     end
+    
 
     it "routes to #edit" do
       expect(get: "/books/1/edit").to route_to("books#edit", id: "1")
